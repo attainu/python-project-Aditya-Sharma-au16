@@ -75,7 +75,7 @@ class SnakeAndLadder:
         print("""
     Welcome to Snake and Ladder Game.
     Version: 1.0.0
-    Developed by: swapnil hajare
+    Developed by: Aditya Sharma
     Rules:
         >>> Initally both the players are at starting position i.e. 0 .
             Take it in turns to roll the dice.
