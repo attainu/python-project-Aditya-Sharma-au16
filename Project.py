@@ -9,8 +9,9 @@ DICE_FACE = 6
 # ladder takes you up from 'key' to 'value'
 snakes = {}
 ladders = {}
-a = input("Do you want manual or auto :")
-if a == "m":
+print("Type 'm' for manual or 'a' for auto and then press enter")
+mode = input("Do you want manual or auto :")
+if mode == "m":
     Snakes = int(input("No. of snakes :"))
     for i in range(Snakes):
         snake = list(map(int, input("snake's head and tail point separated by space :").split()))
@@ -20,7 +21,7 @@ if a == "m":
         ladder = list(map(int, input("ladder's start and end point separated by space :").split()))
         ladders[ladder[0]] = ladder[1]
 
-elif a == "a":
+elif mode == "a":
     snakes = {
     8 : 4,
     18: 1,
@@ -37,9 +38,8 @@ elif a == "a":
     92: 26,
     96: 86,
     98: 68
-}
-
-ladders = {
+    }
+    ladders = {
     6 : 26,
     12: 28,
     14: 34,
@@ -52,7 +52,10 @@ ladders = {
     74: 86,
     82: 98,
     88: 92
-}
+    }
+print(snakes)
+print()
+print(ladders)
 player_turn_text = [
     "lets Go.",
     "Lets win this.",
@@ -97,6 +100,7 @@ class SnakeAndLadder:
                 self.mode = input("Enter \"S\" for sigle player and \"M\" for multiplayer: ")
 
                 if self.mode == "S" or self.mode == "s":
+                    self.player1 = input("Enter player 1 name: ")
                     self.player2 = "Computer"
                     self.num_players = 2
                 else:
